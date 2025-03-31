@@ -61,7 +61,7 @@ export default function GalleryPage() {
         {images.map((img) => (
           <Card
             key={img.id}
-            className="overflow-hidden bg-[#282828] text-primary"
+            className="overflow-hidden  bg-[#282828] text-primary"
           >
             <CardContent className="p-0">
               <div className="relative aspect-video w-full">
@@ -69,7 +69,7 @@ export default function GalleryPage() {
                 <img
                   src={img.src || "/placeholder.svg"}
                   alt={img.alt}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full hover:scale-105 transition-all duration-100 "
                 />
               </div>
             </CardContent>
