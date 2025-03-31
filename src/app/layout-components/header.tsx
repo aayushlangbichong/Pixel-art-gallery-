@@ -7,6 +7,7 @@ import Logo from "./logo";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ROUTES } from "../constants/routes";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const items = [
@@ -44,9 +45,9 @@ export default function Header() {
             colors={[1, 2, 3, 1, 2, 3, 1, 4]}
             timeVariance={200}
           />
-          <div className="px-3 py-2 mr-4 mt-2 border rounded-md">
+          <Button className="px-3 py-2 mr-4 mt-2 text-primary hover:bg-primary/60 border bg-transparent rounded-md">
             <Link href="/">Login </Link>
-          </div>
+          </Button>
         </nav>
         {/* mobile view */}
         <nav className="fixed z-50 md:hidden flex justify-between top-0 right-0 backdrop-blur-xs w-full">
