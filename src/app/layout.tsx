@@ -21,12 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${pixelifySans.variable} relative antialiased`}>
+      <body
+        className={`${pixelifySans.variable} antialiased overflow-x-hidden min-h-screen`}
+      >
         <Header />
-        {children}
+        <main className="pb-16">{children}</main>
+
         <Footer />
       </body>
     </html>
   );
 }
-

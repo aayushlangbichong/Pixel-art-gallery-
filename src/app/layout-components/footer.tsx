@@ -29,7 +29,7 @@ function Footer() {
     },
   ];
   return (
-    <main className="w-full md:bg-gray-700 p-3 fixed bottom-0">
+    <footer className="w-full md:bg-gray-700 p-3 fixed bottom-0 left-0 right-0 z-50">
       <div className="hidden md:flex justify-center w-full gap-4">
         <p>About</p>
         <p>Links</p> <p>Contact us</p>
@@ -42,7 +42,7 @@ function Footer() {
           magnification={50}
         />
       </div>
-    </main>
+    </footer>
   );
 }
 
