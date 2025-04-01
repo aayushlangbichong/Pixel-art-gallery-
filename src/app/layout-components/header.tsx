@@ -18,6 +18,9 @@ export default function Header() {
   ];
 
   const [open, setOpen] = useState(false);
+  const closeMenu = () => {
+    setOpen(false);
+  };
   const pathName = usePathname();
   const activeIndex = items.findIndex((item) => item.href === pathName);
   return (
@@ -57,6 +60,7 @@ export default function Header() {
           <Link href="/login">Login </Link>
         </Button>
       </nav>
+
       {/* mobile view */}
       <nav className="fixed z-50 md:hidden flex justify-between top-0 right-0 backdrop-blur-xs w-full">
         <button
@@ -95,17 +99,23 @@ export default function Header() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -10 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="absolute top-12  p-4 w-full"
+              className="absolute top-12 backdrop-blur-lg  bg-[#292928]  p-4 w-full"
             >
               <ul className="flex flex-col gap-2">
                 <li className=" cursor-pointer">
-                  <Link href={ROUTES.HOME}>Home</Link>
+                  <Link href={ROUTES.HOME} onClick={closeMenu}>
+                    Home
+                  </Link>
                 </li>
                 <li className="cursor-pointer">
-                  <Link href={ROUTES.GALLERY}>Gallery</Link>
+                  <Link href={ROUTES.GALLERY} onClick={closeMenu}>
+                    Gallery
+                  </Link>
                 </li>
                 <li className="cursor-pointer">
-                  <Link href={ROUTES.ARTISTS}>Artists</Link>
+                  <Link href={ROUTES.ARTISTS} onClick={closeMenu}>
+                    Artists
+                  </Link>
                 </li>
               </ul>
             </motion.div>

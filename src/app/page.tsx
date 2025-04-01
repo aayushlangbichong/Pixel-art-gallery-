@@ -40,7 +40,12 @@ export default function Home() {
         <p>Your Online Digital Pixel Art Gallery</p>
         <div className="flex justify-center gap-2 mt-4">
           <Button className="bg-gray-400 hover:cursor-pointer">
-            Submit Artwork
+            <Link
+              href={ROUTES.SUBMIT_ARTWORK}
+              className="flex items-center gap-2"
+            >
+              Submit Artwork
+            </Link>
           </Button>
           <Button className="text-black">
             <Link href={ROUTES.GALLERY} className="flex items-center gap-2">
@@ -71,4 +76,3 @@ export default function Home() {
     </main>
   );
 }
-
