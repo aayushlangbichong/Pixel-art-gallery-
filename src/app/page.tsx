@@ -29,7 +29,7 @@ export default function Home() {
     },
   ];
   return (
-    <main className="">
+    <main className="relative">
       <div className="text-center text-2xl md:text-4xl">
         <h1>
           Welcome to
@@ -50,13 +50,21 @@ export default function Home() {
           </Button>
         </div>
       </div>
-
-      <div className="flex justify-center p-4 mt-10">
+      <div className="md:flex justify-center md:p-6 hidden md:mt-2">
         <Stack
           randomRotation={true}
           sensitivity={180}
           sendToBackOnClick={false}
           cardDimensions={{ width: 300, height: 300 }}
+          cardsData={images}
+        />
+      </div>
+      <div className="flex md:hidden justify-center items-center mt-12 p-4">
+        <Stack
+          randomRotation={true}
+          sensitivity={180}
+          sendToBackOnClick={false}
+          cardDimensions={{ width: 280, height: 280 }}
           cardsData={images}
         />
       </div>

@@ -48,20 +48,20 @@ export default function GalleryPage() {
     },
     {
       id: 8,
-      title: "Sea of Blue moon flower",
+      title: "Frieren",
       src: "https://art.pixilart.com/sr28bef7ccccbaws3.gif",
       alt: "Sea of Blue moon flower",
     },
   ];
 
   return (
-    <main className="container mx-auto py-8">
+    <main className="">
       <h1 className="text-center mb-6 text-3xl">Welcome to the Gallery!</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-2">
         {images.map((img) => (
           <Card
             key={img.id}
-            className="overflow-hidden  bg-[#282828] text-primary"
+            className="overflow-hidden bg-[#282828] text-primary"
           >
             <CardContent className="p-0">
               <div className="relative aspect-video w-full">

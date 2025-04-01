@@ -3,7 +3,7 @@ import React from "react";
 
 function Logo() {
   return (
-    <div className="w-8 h-8 flex">
+    <div className="size-6 md:size-7 flex">
       <Image src={"/logo.png"} height={100} width={100} alt="logo" />
       <Image src={"/logoL.png"} height={100} width={100} alt="logo" />
     </div>
