@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${pixelifySans.variable} antialiased`}>
+      <body className={`${pixelifySans.variable} relative antialiased`}>
         <Header />
         {children}
         <Footer />
